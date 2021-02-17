@@ -23,13 +23,22 @@ Clone this repository or copy the files from this repository into a new folder. 
 
 Make sure to [add your user to the `docker` group](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) when using Linux.
 
+Arch Linux.
+
+```bash
+sudo pacman -S docker-compose
+```
+
 Add user group.
 
 ```bash
 sudo gpasswd -a $USER docker
-```
 
-Relogin.
+# Relogin
+
+# start docker service systemd
+sudo systemctl start docker
+```
 
 ## Configuration
 
@@ -92,6 +101,12 @@ Copy the `docker-compose.yml` file into a new directory. In the directory you cr
 
 * `wp-data` – here you add the database dump
 * `wp-app` – here you copy your existing WordPress code
+
+Chown `$USER`.
+
+```bash
+sudo chown -R ${USER}:users wp-*
+```
 
 You can now use the `up` command:
 
