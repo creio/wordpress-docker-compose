@@ -23,7 +23,19 @@ Clone this repository or copy the files from this repository into a new folder. 
 
 Make sure to [add your user to the `docker` group](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user) when using Linux.
 
+Add user group.
+
+```bash
+sudo gpasswd -a $USER docker
+```
+
+Relogin.
+
 ## Configuration
+
+```bash
+cp .env_old .env
+```
 
 Edit the `.env` file to change the default IP address, MySQL root password and WordPress database name.
 
