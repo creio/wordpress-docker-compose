@@ -38,6 +38,11 @@ sudo gpasswd -a $USER docker
 
 # start docker service systemd
 sudo systemctl start docker
+
+# clone && cd
+git clone https://github.com/creio/wp.git
+
+cd wp
 ```
 
 ## Configuration
